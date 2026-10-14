@@ -1,3 +1,4 @@
+
 name: Practica CI
 
 on:
@@ -17,8 +18,8 @@ jobs:
       - name: Verificar archivo
         run: test -f index.html
 
-      - name: Esperar para comprobar ejecucion
-        run: sleep 60
+      - name: Esperar para tomar captura
+        run: sleep 300
 
       - name: Finalizar
         run: echo "Pipeline ejecutado correctamente"
