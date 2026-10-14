@@ -1,0 +1,21 @@
+name: Practica CI
+
+on:
+  push:
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+
+      - name: Mostrar mensaje
+        run: echo "Iniciando pipeline de CI"
+
+      - name: Verificar archivo
+        run: test -f index.html
+
+      - name: Finalizar
+        run: echo "Pipeline ejecutado correctamente"
